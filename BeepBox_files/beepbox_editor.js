@@ -1,22 +1,22 @@
 `
 Copyright (C) 2019 John Nesky
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of 
-this software and associated documentation files (the "Software"), to deal in 
-the Software without restriction, including without limitation the rights to 
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies 
-of the Software, and to permit persons to whom the Software is furnished to do 
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
 so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all 
+The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 `;
 var beepbox;
@@ -25,19 +25,19 @@ var beepbox;
     }
     Config.versionDisplayName = "Modbox 3.3 BETA";
     Config.scales = toNameMap([
-        { name: "easy :)", flags: [true, false, true, false, true, false, false, true, false, true, false, false] },
-        { name: "easy :(", flags: [true, false, false, true, false, true, false, true, false, false, true, false] },
-        { name: "island :)", flags: [true, false, false, false, true, true, false, true, false, false, false, true] },
-        { name: "island :(", flags: [true, true, false, true, false, false, false, true, true, false, false, false] },
-        { name: "blues :)", flags: [true, false, true, true, true, false, false, true, false, true, false, false] },
-        { name: "blues :(", flags: [true, false, false, true, false, true, true, true, false, false, true, false] },
-        { name: "normal :)", flags: [true, false, true, false, true, true, false, true, false, true, false, true] },
-        { name: "normal :(", flags: [true, false, true, true, false, true, false, true, true, false, true, false] },
+        { name: "happy pentatonic", flags: [true, false, true, false, true, false, false, true, false, true, false, false] },
+        { name: "sad pentatonic", flags: [true, false, false, true, false, true, false, true, false, false, true, false] },
+        { name: "happy tropical", flags: [true, false, false, false, true, true, false, true, false, false, false, true] },
+        { name: "sad tropical", flags: [true, true, false, true, false, false, false, true, true, false, false, false] },
+        { name: "happy blues", flags: [true, false, true, true, true, false, false, true, false, true, false, false] },
+        { name: "blues", flags: [true, false, false, true, false, true, true, true, false, false, true, false] },
+        { name: "major scale", flags: [true, false, true, false, true, true, false, true, false, true, false, true] },
+        { name: "minor scale", flags: [true, false, true, true, false, true, false, true, true, false, true, false] },
         { name: "dbl harmonic :)", flags: [true, true, false, false, true, true, false, true, true, false, false, true] },
         { name: "dbl harmonic :(", flags: [true, false, true, true, false, false, true, true, true, false, false, true] },
-        { name: "enigma", flags: [true, false, true, false, true, false, true, false, true, false, true, false] },
-        { name: "expert", flags: [true, true, true, true, true, true, true, true, true, true, true, true] },
-		{ name: "monotonic", flags: [true, false, false, false, false, false, false, false, false, false, false, false] },
+        { name: "tricky", flags: [true, false, true, false, true, false, true, false, true, false, true, false] },
+        { name: "all", flags: [true, true, true, true, true, true, true, true, true, true, true, true] },
+		{ name: "one key", flags: [true, false, false, false, false, false, false, false, false, false, false, false] },
 		{ name: "beep bishop", flags: [true, true,  false, true,  true,  true,  true,  true,  true,  false, true,  false] },
     ]);
     Config.keys = toNameMap([
@@ -55,25 +55,27 @@ var beepbox;
         { name: "B", isWhiteKey: true, basePitch: 23 },
     ]);
     Config.blackKeyNameParents = [-1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1];
-    Config.tempoMin = 30;
-    Config.tempoMax = 500;
+    Config.tempoMin = 16;
+    Config.tempoMax = 999;
     Config.reverbRange = 4;
-    Config.beatsPerBarMin = 3;
-    Config.beatsPerBarMax = 16;
+    Config.beatsPerBarMin = 2;
+    Config.beatsPerBarMax = 64;
     Config.barCountMin = 1;
     Config.barCountMax = 256;
     Config.patternsPerChannelMin = 1;
-    Config.patternsPerChannelMax = 64;
+    Config.patternsPerChannelMax = 128;
     Config.instrumentsPerChannelMin = 1;
     Config.instrumentsPerChannelMax = 64;
     Config.partsPerBeat = 24;
     Config.ticksPerPart = 2;
     Config.rhythms = toNameMap([
+        { name: "÷1?", stepsPerBeat: 1, ticksPerArpeggio: 3, arpeggioPatterns: [[0], [0, 0, 1, 1], [0, 1, 2, 1], [0, 1, 2, 3]], roundUpThresholds: [3, 9, 17, 21] },
         { name: "÷3 (triplets)", stepsPerBeat: 3, ticksPerArpeggio: 4, arpeggioPatterns: [[0], [0, 0, 1, 1], [0, 1, 2, 1], [0, 1, 2, 3]], roundUpThresholds: [5, 12, 18] },
         { name: "÷4 (standard)", stepsPerBeat: 4, ticksPerArpeggio: 3, arpeggioPatterns: [[0], [0, 0, 1, 1], [0, 1, 2, 1], [0, 1, 2, 3]], roundUpThresholds: [3, 9, 17, 21] },
         { name: "÷6", stepsPerBeat: 6, ticksPerArpeggio: 4, arpeggioPatterns: [[0], [0, 1], [0, 1, 2, 1], [0, 1, 2, 3]], roundUpThresholds: null },
         { name: "÷8", stepsPerBeat: 8, ticksPerArpeggio: 3, arpeggioPatterns: [[0], [0, 1], [0, 1, 2, 1], [0, 1, 2, 3]], roundUpThresholds: null },
-        { name: "freehand", stepsPerBeat: 24, ticksPerArpeggio: 3, arpeggioPatterns: [[0], [0, 1], [0, 1, 2, 1], [0, 1, 2, 3]], roundUpThresholds: null },
+        { name: "freehand (easy)", stepsPerBeat: 24, ticksPerArpeggio: 3, arpeggioPatterns: [[0], [0, 1], [0, 1, 2, 1], [0, 1, 2, 3]], roundUpThresholds: null },
+        { name: "true freehand", stepsPerBeat: 128, ticksPerArpeggio: 3, arpeggioPatterns: [[0], [0, 1], [0, 1, 2, 1], [0, 1, 2, 3]], roundUpThresholds: null },
     ]);
     Config.instrumentTypeNames = ["chip", "FM", "noise", "spectrum", "drumset", "harmonics", "PWM"];
     Config.instrumentTypeHasSpecialInterval = [true, true, false, false, false, true, false];
@@ -106,7 +108,8 @@ var beepbox;
         { name: "seamless", isSeamless: true, attackSeconds: 0.0, releases: false, releaseTicks: 1, slides: false, slideTicks: 3 },
         { name: "hard", isSeamless: false, attackSeconds: 0.0, releases: false, releaseTicks: 3, slides: false, slideTicks: 3 },
         { name: "soft", isSeamless: false, attackSeconds: 0.025, releases: false, releaseTicks: 3, slides: false, slideTicks: 3 },
-        { name: "slide", isSeamless: true, attackSeconds: 0.025, releases: false, releaseTicks: 3, slides: true, slideTicks: 3 },
+        { name: "slide", isSeamless: false, attackSeconds: 0.025, releases: false, releaseTicks: 3, slides: true, slideTicks: 3 },
+        { name: "seamless slide", isSeamless: true, attackSeconds: 0.025, releases: false, releaseTicks: 3, slides: true, slideTicks: 3 },
         { name: "cross fade", isSeamless: false, attackSeconds: 0.04, releases: true, releaseTicks: 6, slides: false, slideTicks: 3 },
         { name: "hard fade", isSeamless: false, attackSeconds: 0.0, releases: true, releaseTicks: 48, slides: false, slideTicks: 3 },
         { name: "medium fade", isSeamless: false, attackSeconds: 0.0125, releases: true, releaseTicks: 72, slides: false, slideTicks: 3 },
@@ -115,8 +118,13 @@ var beepbox;
     Config.vibratos = toNameMap([
         { name: "none", amplitude: 0.0, periodsSeconds: [0.14], delayParts: 0 },
         { name: "light", amplitude: 0.15, periodsSeconds: [0.14], delayParts: 0 },
+        { name: "light uneasy", amplitude: 0.15, periodsSeconds: [1], delayParts: 0 },
+        { name: "standard", amplitude: 0.3, periodsSeconds: [0.14], delayParts: 0 },
+        { name: "standard uneasy", amplitude: 0.3, periodsSeconds: [1], delayParts: 0 },
         { name: "delayed", amplitude: 0.3, periodsSeconds: [0.14], delayParts: 18 },
+        { name: "delayed uneasy", amplitude: 0.3, periodsSeconds: [1], delayParts: 18 },
         { name: "heavy", amplitude: 0.45, periodsSeconds: [0.14], delayParts: 0 },
+        { name: "heavy uneasy", amplitude: 0.45, periodsSeconds: [1], delayParts: 0 },
         { name: "shaky", amplitude: 0.1, periodsSeconds: [0.11, 1.618 * 0.11, 3 * 0.11], delayParts: 0 },
     ]);
     Config.intervals = toNameMap([
@@ -4539,7 +4547,7 @@ var beepbox;
     Synth.fmSynthFunctionCache = {};
     Synth.fmSourceTemplate = (`
 			var sineWave = beepbox.Config.sineWave;
-			
+
 			var phaseDeltaScale = +tone.phaseDeltaScale;
 			var operator#Phase       = +((tone.phases[#] % 1) + beepbox.Synth.negativePhaseGuard) * beepbox.Config.sineWaveLength;
 			var operator#PhaseDelta  = +tone.phaseDeltas[#];
@@ -4550,7 +4558,7 @@ var beepbox;
 			var feedbackDelta        = +tone.feedbackDelta;
 			var volume = +tone.volumeStart;
 			var volumeDelta = +tone.volumeDelta;
-			
+
 			var filter1 = +tone.filter;
 			var filter2 = instrument.getFilterIsFirstOrder() ? 1.0 : filter1;
 			var filterScale1 = +tone.filterScale;
@@ -4558,31 +4566,31 @@ var beepbox;
 			var filterResonance = beepbox.Config.filterMaxResonance * Math.pow(Math.max(0, instrument.getFilterResonance() - 1) / (beepbox.Config.filterResonanceRange - 2), 0.5);
 			var filterSample0 = +tone.filterSample0;
 			var filterSample1 = +tone.filterSample1;
-			
+
 			var stopIndex = bufferIndex + runLength;
 			while (bufferIndex < stopIndex) {
 				// INSERT OPERATOR COMPUTATION HERE
 				var fmOutput = (/*operator#Scaled*/); // CARRIER OUTPUTS
-				
+
 				var feedback = filterResonance + filterResonance / (1.0 - filter1);
 				filterSample0 += filter1 * (fmOutput - filterSample0 + feedback * (filterSample0 - filterSample1));
 				filterSample1 += filter2 * (filterSample0 - filterSample1);
-				
+
 				feedbackMult += feedbackDelta;
 				operator#OutputMult += operator#OutputDelta;
 				operator#Phase += operator#PhaseDelta;
 				operator#PhaseDelta *= phaseDeltaScale;
 				filter1 *= filterScale1;
 				filter2 *= filterScale2;
-				
+
 				data[bufferIndex] += filterSample1 * volume;
 				volume += volumeDelta;
 				bufferIndex++;
 			}
-			
+
 			tone.phases[#] = operator#Phase / ` + beepbox.Config.sineWaveLength + `;
 			tone.feedbackOutputs[#] = operator#Output;
-			
+
 			var epsilon = (1.0e-24);
 			if (-epsilon < filterSample0 && filterSample0 < epsilon) filterSample0 = 0.0;
 			if (-epsilon < filterSample1 && filterSample1 < epsilon) filterSample1 = 0.0;

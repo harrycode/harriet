@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Modbox 3.3 BETA</title>
+	<title>Harriet 3.3 BETA</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<meta name="description" content="BeepBox is an online tool for sketching and sharing chiptune melodies. ModBox expands the world of BeepBox into a whole new realm!" />
 	<meta name="keywords" content="chiptune, music, melody, composition, tool, square wave, NES, NSF, BeepBox, beepbox" />
@@ -14,10 +14,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" rel="stylesheet" media="none" onload="if (this.media != 'all') this.media='all';" /> <!-- this is a trick to load CSS asynchronously. -->
 	<!-- <link rel="manifest" href="/manifest.webmanifest" /> -->
 	<style type="text/css">
+
+		@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
 		body {
 			margin: auto;
 			background: #000;
-			font-family: 'Roboto', sans-serif;
+			font-family: 'Ubuntu', sans-serif;
 			font-size: large;
 			line-height: 1.3;
 			color: #fff;
@@ -51,7 +54,7 @@
 		#beepboxEditorContainer {
 			min-height: 645px;
 		}
-		
+
 		/* wide screen */
 		@media (min-width: 701px) {
 			body {
@@ -68,7 +71,7 @@
 				width: 300px;
 			}
 		}
-		
+
 		/* narrow screen */
 		@media (max-width: 700px) {
 			body {
@@ -85,17 +88,17 @@
 
 <body>
 	<div id="beepboxEditorContainer"></div>
-	
+
 	<h1>
-		Modbox 3.3 BETA
+		Harriet 3.3 BETA
 	</h1>
 	<p id="introduction">
-		BeepBox is an online tool for sketching and sharing instrumental melodies. Because Beepbox is so cool, the Modbox devs have to remake their mod in this new update. Stay tuned!
+		BeepBox is an online tool for sketching and sharing instrumental melodies. Because Beepbox is so cool, the Modbox devs have to remake their mod in this new update. However, I'm going to take my own approach on this, so stay tuned!
 	</p>
 	<p>
-		All song data is packaged into the URL at the top of your browser. 
-		When you make changes to the song, the URL is updated to reflect your changes. 
-		When you are satisfied with your song, just copy and paste the URL to save and share your song! 
+		All song data is packaged into the URL at the top of your browser.
+		When you make changes to the song, the URL is updated to reflect your changes.
+		When you are satisfied with your song, just copy and paste the URL to save and share your song!
 	</p>
     <div>
 		BeepBox is a passion project, and will always be free to use. If you want shaktool to make it cooler, you can donate to him
@@ -107,15 +110,15 @@
 		</form>
 		.
     </div>
-	
+
 	<div class="column-container">
 		<div class="instructions-column">
 			<h1>
 				Instructions
 			</h1>
 			<p>
-				You can add or remove notes by clicking on the gray rows at the top. 
-				BeepBox automatically plays the notes out loud for you. Try it!
+				You can add or remove notes by clicking on the gray rows at the top.
+				Harriet automatically plays the notes out loud for you. Try it!
 			</p>
 			<p>
 				Notes go into patterns, and you can edit one pattern at a time.
@@ -125,16 +128,16 @@
 				</span>
 			</p>
 			<p>
-				BeepBox can play several rows of patterns simultaneously, and each row has its own set of patterns. 
+				Harriet can play several rows of patterns simultaneously, and each row has its own set of patterns.
 				Most rows can play melodies or harmonies, but the bottom row is for drums.
 			</p>
 			<p>
-				The purple loop underneath the numbered boxes controls which part of the song is currently repeating. 
-				Move the loop to listen to a different part of the song, or drag the ends to expand the loop to include the whole song. 
+				The purple loop underneath the numbered boxes controls which part of the song is currently repeating.
+				Move the loop to listen to a different part of the song, or drag the ends to expand the loop to include the whole song.
 			</p>
 			<div id="keyboard-instructions">
 				<p>
-					When BeepBox has focus (click on its interface above), you can use these keyboard shortcuts: <br/>
+					When Harriet has focus (click on its interface above), you can use these keyboard shortcuts: <br/>
 				</p>
 				<ul>
 					<li>Spacebar: Pause or Resume</li>
@@ -150,13 +153,13 @@
 			</div>
 			<p>
 				In the note pattern editor, you can click and drag horizontally on a note to adjust its duration.
-				You can also click above or below an existing note to add more notes to be played simultaneously, which is called a chord. 
+				You can also click above or below an existing note to add more notes to be played simultaneously, which is called a chord.
 			</p>
 			<p>
 				AVDANCED: Drag vertically from an existing note to bend its pitch, or drag vertically from above or below the note to adjust its volume.
 			</p>
 			<p>
-				BeepBox has many more features. 
+				BeepBox has many more features.
 				Try playing with the buttons and menus on the right side to find out what it can do!
 			</p>
 			<p>
@@ -171,7 +174,7 @@
 				BeepBox is developed by <a href="http://www.johnnesky.com">John Nesky</a>, also known as <a href="https://twitter.com/shaktool">@shaktool</a>. Modded Beepbox is developed by Quirby64, Theepicosity, Fillygroove, DARE, and HiddenRealm.
 			</p>
 			<p>
-				BeepBox does not claim ownership over songs created with it, so original songs belong to their authors. 
+				BeepBox does not claim ownership over songs created with it, so original songs belong to their authors.
 			</p>
 			<p>
 				Neither John Nesky nor BeepBox/ModBox assume responsibility for any copyrighted material played on BeepBox. No songs are ever received, recorded, or distributed by BeepBox's servers. All song data is contained in the URL after the hash (#) mark, and BeepBox running inside your browser converts that data into sound waves. This, as well as the previous statement, apply to Modbox aswell.
@@ -180,16 +183,16 @@
 				You can download <a download="beepbox_offline.html" href="beepbox_offline.html">an offline version of BeepBox</a> to use when you don't have access to the internet. The features are otherwise the same.
 			</p>
 			<p>
-				You can download and use <a href="https://github.com/ModdedBeepbox/3.3">the source code</a> under the MIT license. In particular, you can use the synth code <a href="synth_example.html">as demonstrated here</a> to play BeepBox songs in your own JavaScript projects! 
+				You can download and use <a href="https://github.com/ModdedBeepbox/3.3">the source code</a> under the MIT license. In particular, you can use the synth code <a href="synth_example.html">as demonstrated here</a> to play BeepBox songs in your own JavaScript projects!
 			</p>
-			
+
 			<h1>
 				Modded BeepBox Changelog
 			</h1>
 			<p>
 				Go <a href="https://beepbox.fandom.com/wiki/Beepbox_Wiki">here</a> for more information regarding BeepBox and ModBox.
 			</p>
-			
+
 			<h3>
 				ModBox 3.3 BETA
 			</h3>
@@ -205,25 +208,25 @@
 			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
 	</div>
-	
+
 	<!--
 	Instead of loading js beepbox editor interface directly, test for browser support.
 	<script type="text/javascript" src="beepbox_editor.min.js"></script>
 	-->
 	<script type="text/javascript">
-		
+
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|android|ipad|playbook|silk/i.test(navigator.userAgent) ) {
 			document.getElementById("introduction").innerHTML = "BeepBox is an online tool for sketching and sharing chiptune melodies. Make sure that your volume is turned up, then press the play button!";
 			document.getElementById("keyboard-instructions").style.display = "none";
 			document.getElementById("bar-editing").innerHTML = "Tap the other boxes to move to a different part of the song, or tap on the currently selected box to swap which pattern is played during that part of the song.";
 		}
-		
+
 		function browserHasRequiredFeatures() {
 			"use strict";
 			if (window.AudioContext == undefined && window.webkitAudioContext == undefined) {
 				return false;
 			}
-			
+
 			try {
 				eval("class T {}");
 				eval("const a = () => 0");
@@ -231,10 +234,10 @@
 			} catch (error) {
 				return false;
 			}
-			
+
 			return true;
 		}
-		
+
 		if (browserHasRequiredFeatures()) {
 			// Go ahead and load js beepbox editor interface:
 			var fileref = document.createElement("script");
@@ -244,6 +247,6 @@
 		} else {
 			document.getElementById("beepboxEditorContainer").innerHTML = "Sorry, BeepBox doesn't support your browser. Try a recent version of Chrome, Firefox, Edge, Safari, or Opera.";
 		}
-		
+
 	</script>
 </body></html>

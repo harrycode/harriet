@@ -1,22 +1,22 @@
 /*
 Copyright (C) 2012 John Nesky
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of 
-this software and associated documentation files (the "Software"), to deal in 
-the Software without restriction, including without limitation the rights to 
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies 
-of the Software, and to permit persons to whom the Software is furnished to do 
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
 so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all 
+The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
@@ -283,15 +283,15 @@ var beepbox;
     Config.pianoScaleFlags =     [ true, false, true, false, true, true, false, true, false, true, false, true];
     Config.blackKeyNameParents = [-1,   1,     -1,    1,    -1,    1,   -1,    -1,    1,    -1,    1,   -1    ];
     Config.pitchNames =          ["C", null, "D", null, "E", "F", null, "G", null, "A", null, "B"];
-	
+
 	Config.themeNames = ["Default", "ModBox 2.0", "Artic", "Cinnamon Roll [!]", "Ocean", "Rainbow [!]", "Float [!]", "Windows", "Grassland", "Dessert", "Kahootiest", "Beam to the Bit [!]", "Pretty Egg", "Poniryoshka", "Gameboy [!]", "Woodkid", "Midnight", "Snedbox", "unnamed", "Piano [!] [↻]", "Halloween", "FrozenOver❄️"];
-	
+
 	volumeColorPallet =            ["#777777", "#c4ffa3", "#42dcff", "#ba8418", "#090b3a", "#ff00cb", "#878787", "#15a0db", "#74bc21", "#ff0000", "#66bf39", "#fefe00", "#f01d7a", "#ffc100", "#8bac0f", "#ef3027", "#aa5599", "#a53a3d", "#ffffff", "#ff0000", "#9e2200", "#ed2d2d"]
 	sliderOneColorPallet =         ["#9900cc", "#00ff00", "#ffffff", "#ba8418", "#5982ff", "#ff0000", "#ffffff", "#2779c2", "#a0d168", "#ff6254", "#ff3355", "#fefe00", "#6b003a", "#4b4b4b", "#9bbc0f", "#e83c4e", "#445566", "#a53a3d", "#ffffff", "#ffffff", "#9e2200", "#38ef17"]
 	sliderOctaveColorPallet =      ["#444444", "#00ff00", "#a5eeff", "#e59900", "#4449a3", "#43ff00", "#ffffff", "#295294", "#74bc21", "#ff5e3a", "#eb670f", "#0001fc", "#ffb1f4", "#5f4c99", "#9bbc0f", "#ef3027", "#444444", "#444444", "#ffffff", "#211616", "#9e2200", "#ffffff"]
 	sliderOctaveNotchColorPallet = ["#886644", "#ffffff", "#cefffd", "#ffff25", "#3dffdb", "#0400ff", "#c9c9c9", "#fdd01d", "#20330a", "#fff570", "#ff3355", "#fa0103", "#b4001b", "#ff8291", "#8bac0f", "#ffedca", "#aa5599", "#a53a3d", "#ffffff", "#ff4c4c", "#701800", "#ed2d2d"]
 	buttonColorPallet =            ["#ffffff", "#00ff00", "#42dcff", "#ffff25", "#4449a3", "#f6ff00", "#000000", "#fdd01d", "#69c400", "#fffc5b", "#66bf39", "#fefe00", "#75093e", "#818383", "#8bac0f", "#ffedca", "#000000", "#ffffff", "#ffffff", "#ffffff", "#9e2200", "#38ef17"]
-	
+
 	// For Piano Theme
 	noteOne =            ["#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#9e2200"]
 	noteTwo =            ["#bfbfbf", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#9e2200"]
@@ -305,7 +305,7 @@ var beepbox;
 	noteTen =            ["#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#9e2200"]
 	noteEleven =         ["#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#bfbfbf", "#7a7a7a", "#9e2200"]
 	noteTwelve =         ["#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#7a7a7a", "#bfbfbf", "#bfbfbf", "#9e2200"]
-	
+
 	// Gives Color of the Sheet
 	baseNoteColorPallet =           ["#886644", "#c4ffa3", "#eafffe", "#f5bb00", "#090b3a", "#ffaaaa", "#ffffff", "#da4e2a", "#20330a", "#fffc5b", "#45a3e5", "#fefe00", "#fffafa", "#1a2844", "#9bbc0f", "#fff6fe", "#222222", "#886644", "#ffffa0", "#ffffff", "#681701", "#88bce8"]
 	secondNoteColorPallet =         ["#444444", "#444444", "#444444", "#f5bb00", "#444444", "#ffceaa", "#ededed", "#444444", "#444444", "#444444", "#444444", "#111111", "#444444", "#444444", "#9bbc0f", "#41323b", "#222222", "#444444", "#ffffa0", "#ffffff", "#754a3f", "#99c8ef"]
@@ -318,8 +318,8 @@ var beepbox;
 	ninthNoteColorPallet =          ["#444444", "#444444", "#444444", "#f5bb00", "#444444", "#b2f3ff", "#828282", "#444444", "#444444", "#444444", "#444444", "#0001fc", "#444444", "#444444", "#306230", "#41323b", "#222222", "#444444", "#ffffa0", "#ffffff", "#754a3f", "#cbe0f2"]
 	tenNoteColorPallet =            ["#444444", "#444444", "#444444", "#f5bb00", "#444444", "#b2b3ff", "#777777", "#444444", "#444444", "#444444", "#444444", "#111111", "#444444", "#444444", "#0f380f", "#41323b", "#222222", "#444444", "#ffffa0", "#ffffff", "#754a3f", "#b8d7f2"]
 	elevenNoteColorPallet =         ["#444444", "#444444", "#444444", "#f5bb00", "#444444", "#e0b2ff", "#565656", "#444444", "#444444", "#444444", "#444444", "#111111", "#444444", "#444444", "#0f380f", "#41323b", "#222222", "#444444", "#ffffa0", "#ffffff", "#754a3f", "#abd3f4"]
-	twelveNoteColorPallet =         ["#444444", "#444444", "#444444", "#f5bb00", "#444444", "#ffafe9", "#282828", "#444444", "#444444", "#444444", "#444444", "#111111", "#444444", "#444444", "#0f380f", "#41323b", "#222222", "#444444", "#ffffa0", "#ffffff", "#754a3f", "#99c8ef"]	
-	
+	twelveNoteColorPallet =         ["#444444", "#444444", "#444444", "#f5bb00", "#444444", "#ffafe9", "#282828", "#444444", "#444444", "#444444", "#444444", "#111111", "#444444", "#444444", "#0f380f", "#41323b", "#222222", "#444444", "#ffffa0", "#ffffff", "#754a3f", "#99c8ef"]
+
 	channelOneBrightColorPallet =         ["#25f3ff"]
 	channelTwoBrightColorPallet =         ["#44ff44"]
 	channelThreeBrightColorPallet =       ["#ffff25"]
@@ -353,7 +353,7 @@ var beepbox;
 	channelFourteenDimColorPallet =    ["#aaaaaa"]
 	channelFifteenDimColorPallet =     ["#5869BD"]
 	channelSixteenDimColorPallet =     ["#7c9b42"]
-	
+
     Config.keyNames =      ["B", "A♯", "A", "G♯", "G", "F♯", "F", "E", "D♯", "D", "C♯", "C"];
     Config.keyTransposes = [23,  22,   21,  20,   19,  18,   17,  16,  15,   14,  13,   12 ];
     Config.mixNames =      ["Type A (B & S)", "Type B (M)", "Type C"];
@@ -365,11 +365,11 @@ var beepbox;
 	Config.detuneRange = 24;
 	Config.muffRange = 24;
     Config.beatsPerBarMin = 1;
-    Config.beatsPerBarMax = 24;
+    Config.beatsPerBarMax = 64;
     Config.barCountMin = 1;
     Config.barCountMax = 128;
     Config.patternsPerChannelMin = 1;
-    Config.patternsPerChannelMax = 64;
+    Config.patternsPerChannelMax = 128;
     Config.instrumentsPerChannelMin = 1;
     Config.instrumentsPerChannelMax = 64;
     Config.partNames =  ["÷3 (triplets)", "÷4 (standard)", "÷6", "÷8", "÷16 (arpfest)", "÷12", "÷9", "÷5", "÷50", "÷24"];
@@ -409,7 +409,7 @@ var beepbox;
     Config.volumeMValues = [0.0, 0.5, 1.0, 1.5, 2.0, -1.0];
     Config.ipanValues = [-1.0, -0.75, -0.5, -0.25, 0.0, 0.25, 0.5, 0.75, 1.0];
     Config.operatorCount = 4;
-	
+
     Config.operatorAlgorithmNames = [
         "1←(2 3 4)",
         "1←(2 3←4)",
@@ -584,7 +584,7 @@ var beepbox;
         0x6A,
         0x21,
     ];
-	
+
     Config.drumInterval = 6;
     Config.drumCount = 12;
     Config.pitchCount = 37;
@@ -970,7 +970,7 @@ var beepbox;
         };
         Song.prototype.getThemeName = function () {
             return (Config.themeNames[this.theme]);
-        }; 
+        };
         Song.prototype.getTimeSig = function () {
             return ((this.beatsPerBar) + '/' + (this.partsPerBeat) + ' with ' + (this.barCount) + ' bars.');
         };
@@ -994,7 +994,7 @@ var beepbox;
         };
         Song.prototype.getVolBend = function () {
             return this.volBendCount;
-        }; 
+        };
         Song.prototype.initToDefault = function (andResetChannels) {
             if (andResetChannels === void 0) { andResetChannels = true; }
             this.scale = 0;
@@ -1363,30 +1363,30 @@ var beepbox;
                 else if (command == 109) {
                     this.reverb = base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
                     this.reverb = Song._clip(0, Config.reverbRange, this.reverb);
-                }   
+                }
                 else if (command == 120) {
                     this.blend = base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
                     this.blend = Song._clip(0, Config.blendRange, this.blend);
-                }  
+                }
                 else if (command == 121) {
                     this.riff = base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
                     this.riff = Song._clip(0, Config.riffRange, this.riff);
-                }    
+                }
                 else if (command == 124) {
 					this.sampleRate = base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
-                }    
+                }
                 else if (command == 68) {
                     if (beforeSeven) {
 					}
-                }    					
+                }
                 else if (command == 72) {
                     this.detune = base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
                     this.detune = Song._clip(0, Config.detuneRange, this.detune);
-                }    	
+                }
                 else if (command == 36) {
                     this.muff = base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
                     this.muff = Song._clip(0, Config.muffRange, this.muff);
-                }    					
+                }
                 else if (command == 97) {
                     if (beforeThree) {
                         this.beatsPerBar = [6, 7, 8, 9, 10][base64CharCodeToInt[compressed.charCodeAt(charIndex++)]];
@@ -1570,7 +1570,7 @@ var beepbox;
                 }
 				else if (command == 76) {
                     this.channels[instrumentChannelIterator].instruments[instrumentIndexIterator].ipan = Song._clip(0, Config.ipanValues.length, base64CharCodeToInt[compressed.charCodeAt(charIndex++)]);
-                }   
+                }
 				else if (command == 66) {
                     if (beforeThree) {
                         channel = base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
@@ -3357,7 +3357,7 @@ var beepbox;
     Synth.synthSourceTemplate = ("\n\t\t\tvar sampleTime = 1.0 / synth.samplesPerSecond;\n\t\t\tvar effectYMult = +synth.effectYMult;\n\t\t\tvar limitDecay = +synth.limitDecay;\n\t\t\tvar volume = +synth.volume;\n\t\t\tvar delayLineLeft = synth.delayLineLeft;\n\t\t\tvar delayLineRight = synth.delayLineRight;\n\t\t\tvar reverb = Math.pow(song.reverb / beepbox.Config.reverbRange, 0.667) * 0.425;\n\t\t\tvar blend = Math.pow(song.blend / beepbox.Config.blendRange, 0.667) * 0.425;\n\t\t\tvar mix = song.mix;\n\t\t\tvar muff = Math.pow(song.muff / beepbox.Config.muffRange, 0.667) * 0.425;\n\t\t\tvar detune = song.detune;\n\t\t\tvar riff = Math.pow(song.riff / beepbox.Config.riffRange, 0.667) * 0.425; \n\t\t\tvar sineWave = beepbox.Config.sineWave;\n\t\t\t\n\t\t\t// Initialize instruments based on current pattern.\n\t\t\tvar instrumentChannel# = song.getPatternInstrument(#, synth.bar); // ALL\n\t\t\tvar instrument# = song.channels[#].instruments[instrumentChannel#]; // ALL\n\t\t\tvar channel#Wave = (mix <= 1) ? beepbox.Config.waves[instrument#.wave] : beepbox.Config.wavesMixC[instrument#.wave]; // CHIP\n\t\t\tvar channel#Wave = beepbox.Config.getDrumWave(instrument#.wave); // NOISE\n\t\t\tvar channel#WaveLength = channel#Wave.length; // CHIP\n\t\t\tvar channel#FilterBase = (song.mix == 2) ? Math.pow(2 - (blend * 2) + (muff * 2), -beepbox.Config.filterBases[instrument#.filter]) : Math.pow(2, -beepbox.Config.filterBases[instrument#.filter] + (blend * 4) - (muff * 4)); // CHIP\n\t\t\tvar channel#TremoloScale = beepbox.Config.effectTremolos[instrument#.effect]; // PITCH\n\t\t\t\n\t\t\twhile (bufferIndex < bufferLength) {\n\t\t\t\t\n\t\t\t\tvar samples;\n\t\t\t\tvar samplesLeftInBuffer = bufferLength - bufferIndex;\n\t\t\t\tif (synth.arpeggioSampleCountdown <= samplesLeftInBuffer) {\n\t\t\t\t\tsamples = synth.arpeggioSampleCountdown;\n\t\t\t\t} else {\n\t\t\t\t\tsamples = samplesLeftInBuffer;\n\t\t\t\t}\n\t\t\t\tsynth.arpeggioSampleCountdown -= samples;\n\t\t\t\t\n\t\t\t\tvar time = synth.part + synth.beat * song.partsPerBeat;\n\t\t\t\t\n\t\t\t\tbeepbox.Synth.computeChannelInstrument(synth, song, #, time, sampleTime, samplesPerArpeggio, samples); // ALL\n\t\t\t\tvar synthChannel# = synth.channels[#]; // ALL\n\t\t\t\t\n\t\t\t\tvar channel#ChorusA = Math.pow(2.0, (beepbox.Config.chorusOffsets[instrument#.chorus] + beepbox.Config.chorusIntervals[instrument#.chorus] + beepbox.Config.octoffValues[instrument#.octoff] + (detune / 24) * ((riff * beepbox.Config.chorusRiffApp[instrument#.chorus]) + 1)) / 12.0); // CHIP\n\t\t\t\tvar channel#ChorusB = Math.pow(2.0, (beepbox.Config.chorusOffsets[instrument#.chorus] - beepbox.Config.chorusIntervals[instrument#.chorus] + beepbox.Config.octoffValues[instrument#.octoff] + (detune / 24) * ((riff * beepbox.Config.chorusRiffApp[instrument#.chorus]) + 1)) / 12.0); // CHIP\n\t\t\t\tvar channel#ChorusSign = synthChannel#.harmonyVolumeMult * (beepbox.Config.chorusSigns[instrument#.chorus]); // CHIP\n\t\t\t\tchannel#ChorusB *= synthChannel#.harmonyMult; // CHIP\n\t\t\t\tvar channel#ChorusDeltaRatio = channel#ChorusB / channel#ChorusA * ((riff * beepbox.Config.chorusRiffApp[instrument#.chorus]) + 1); // CHIP\n\t\t\t\t\n\t\t\t\tvar channel#PhaseDelta = synthChannel#.phaseDeltas[0] * channel#ChorusA * ((riff * beepbox.Config.chorusRiffApp[instrument#.chorus]) + 1); // CHIP\n\t\t\t\tvar channel#PhaseDelta = synthChannel#.phaseDeltas[0] / 32768.0; // NOISE\n\t\t\t\tvar channel#PhaseDeltaScale = synthChannel#.phaseDeltaScale; // ALL\n\t\t\t\tvar channel#Volume = synthChannel#.volumeStarts[0]; // CHIP\n\t\t\t\tvar channel#Volume = synthChannel#.volumeStarts[0]; // NOISE\n\t\t\t\tvar channel#VolumeLeft = synthChannel#.volumeLeft[0]; // ALL\n\t\t\t\tvar channel#VolumeRight = synthChannel#.volumeRight[0]; // ALL\n\t\t\t\tvar channel#VolumeDelta = synthChannel#.volumeDeltas[0]; // CHIP\n\t\t\t\tvar channel#VolumeDelta = synthChannel#.volumeDeltas[0]; // NOISE\n\t\t\t\tvar channel#Filter = synthChannel#.filter * channel#FilterBase; // CHIP\n\t\t\t\tvar channel#Filter = synthChannel#.filter; // NOISE\n\t\t\t\tvar channel#FilterScale = synthChannel#.filterScale; // CHIP\n\t\t\t\tvar channel#VibratoScale = synthChannel#.vibratoScale; // PITCH\n\t\t\t\t\n\t\t\t\tvar effectY     = Math.sin(synth.effectPhase);\n\t\t\t\tvar prevEffectY = Math.sin(synth.effectPhase - synth.effectAngle);\n\t\t\t\t\n\t\t\t\tvar channel#PhaseA = synth.channels[#].phases[0] % 1; // CHIP\n\t\t\t\tvar channel#PhaseB = synth.channels[#].phases[1] % 1; // CHIP\n\t\t\t\tvar channel#Phase  = synth.channels[#].phases[0] % 1; // NOISE\n\t\t\t\t\n\t\t\t\tvar channel#Operator$Phase       = ((synth.channels[#].phases[$] % 1) + " + Synth.negativePhaseGuard + ") * " + Config.sineWaveLength + "; // FM\n\t\t\t\tvar channel#Operator$PhaseDelta  = synthChannel#.phaseDeltas[$]; // FM\n\t\t\t\tvar channel#Operator$OutputMult  = synthChannel#.volumeStarts[$]; // FM\n\t\t\t\tvar channel#Operator$OutputDelta = synthChannel#.volumeDeltas[$]; // FM\n\t\t\t\tvar channel#Operator$Output      = synthChannel#.feedbackOutputs[$]; // FM\n\t\t\t\tvar channel#FeedbackMult         = synthChannel#.feedbackMult; // FM\n\t\t\t\tvar channel#FeedbackDelta        = synthChannel#.feedbackDelta; // FM\n\t\t\t\t\n\t\t\t\tvar channel#SampleLeft = +synth.channels[#].sampleLeft; // ALL\n\t\t\t\tvar channel#SampleRight = +synth.channels[#].sampleRight; // ALL\n\t\t\t\t\n\t\t\t\tvar delayPosLeft = 0|synth.delayPosLeft;\n\t\t\t\tvar delayFeedback0Left = +synth.delayFeedback0Left;\n\t\t\t\tvar delayFeedback1Left = +synth.delayFeedback1Left;\n\t\t\t\tvar delayFeedback2Left = +synth.delayFeedback2Left;\n\t\t\t\tvar delayFeedback3Left = +synth.delayFeedback3Left;\n\t\t\t\tvar delayPosRight = 0|synth.delayPosRight;\n\t\t\t\tvar delayFeedback0Right = +synth.delayFeedback0Right;\n\t\t\t\tvar delayFeedback1Right = +synth.delayFeedback1Right;\n\t\t\t\tvar delayFeedback2Right = +synth.delayFeedback2Right;\n\t\t\t\tvar delayFeedback3Right = +synth.delayFeedback3Right;\n\t\t\t\tvar limit = +synth.limit;\n\t\t\t\t\n\t\t\t\twhile (samples) {\n\t\t\t\t\tvar channel#Vibrato = 1.0 + channel#VibratoScale * effectY; // PITCH\n\t\t\t\t\tvar channel#Tremolo = 1.0 + channel#TremoloScale * (effectY - 1.0); // PITCH\n\t\t\t\t\tvar temp = effectY;\n\t\t\t\t\teffectY = effectYMult * effectY - prevEffectY;\n\t\t\t\t\tprevEffectY = temp;\n\t\t\t\t\t\n\t\t\t\t\tchannel#SampleLeft += ((channel#Wave[0|(channel#PhaseA * channel#WaveLength)] + channel#Wave[0|(channel#PhaseB * channel#WaveLength)] * channel#ChorusSign) * channel#Volume * channel#Tremolo - channel#SampleLeft) * channel#Filter * channel#VolumeLeft; // CHIP \n\t\t\t\t\tchannel#SampleLeft += (channel#Wave[0|(channel#Phase * 32768.0)] * channel#Volume - channel#SampleLeft) * channel#Filter * channel#VolumeLeft; // NOISE\n\t\t\t\t\tchannel#SampleRight += ((channel#Wave[0|(channel#PhaseA * channel#WaveLength)] + channel#Wave[0|(channel#PhaseB * channel#WaveLength)] * channel#ChorusSign) * channel#Volume * channel#Tremolo - channel#SampleRight) * channel#Filter * channel#VolumeRight; // CHIP \n\t\t\t\t\tchannel#SampleRight += (channel#Wave[0|(channel#Phase * 32768.0)] * channel#Volume - channel#SampleRight) * channel#Filter * channel#VolumeRight; // NOISE\n\t\t\t\t\tchannel#Volume += channel#VolumeDelta; // CHIP\n\t\t\t\t\tchannel#Volume += channel#VolumeDelta; // NOISE\n\t\t\t\t\tchannel#PhaseA += channel#PhaseDelta * channel#Vibrato; // CHIP\n\t\t\t\t\tchannel#PhaseB += channel#PhaseDelta * channel#Vibrato * channel#ChorusDeltaRatio; // CHIP\n\t\t\t\t\tchannel#Phase += channel#PhaseDelta; // NOISE\n\t\t\t\t\tchannel#Filter *= channel#FilterScale; // CHIP\n\t\t\t\t\tchannel#PhaseA -= 0|channel#PhaseA; // CHIP\n\t\t\t\t\tchannel#PhaseB -= 0|channel#PhaseB; // CHIP\n\t\t\t\t\tchannel#Phase -= 0|channel#Phase; // NOISE\n\t\t\t\t\tchannel#PhaseDelta *= channel#PhaseDeltaScale; // CHIP\n\t\t\t\t\tchannel#PhaseDelta *= channel#PhaseDeltaScale; // NOISE\n\t\t\t\t\t\n\t\t\t\t\t// INSERT OPERATOR COMPUTATION HERE\n\t\t\t\t\tchannel#SampleLeft = channel#Tremolo * (/*channel#Operator$Scaled*/) * channel#VolumeLeft; // CARRIER OUTPUTS\n\t\t\t\t\tchannel#SampleRight = channel#Tremolo * (/*channel#Operator$Scaled*/) * channel#VolumeRight; // CARRIER OUTPUTS\n\t\t\t\t\tchannel#FeedbackMult += channel#FeedbackDelta; // FM\n\t\t\t\t\tchannel#Operator$OutputMult += channel#Operator$OutputDelta; // FM\n\t\t\t\t\tchannel#Operator$Phase += channel#Operator$PhaseDelta * channel#Vibrato; // FM\n\t\t\t\t\tchannel#Operator$PhaseDelta *= channel#PhaseDeltaScale; // FM\n\t\t\t\t\t\n\t\t\t\t\t// Reverb, implemented using a feedback delay network with a Hadamard matrix and lowpass filters.\n\t\t\t\t\t// good ratios:    0.555235 + 0.618033 + 0.818 +   1.0 = 2.991268\n\t\t\t\t\t// Delay lengths:  3041     + 3385     + 4481  +  5477 = 16384 = 2^14\n\t\t\t\t\t// Buffer offsets: 3041    -> 6426   -> 10907 -> 16384\n\t\t\t\t\tvar delayPos1Left = (delayPosLeft +  3041) & 0x3FFF;\n\t\t\t\t\tvar delayPos2Left = (delayPosLeft +  6426) & 0x3FFF;\n\t\t\t\t\tvar delayPos3Left = (delayPosLeft + 10907) & 0x3FFF;\n\t\t\t\t\tvar delaySampleLeft0 = (delayLineLeft[delayPosLeft]\n\t\t\t\t\t\t+ channel#SampleLeft // PITCH\n\t\t\t\t\t);\n\t\t\t\t\tvar delayPos1Right = (delayPosRight +  3041) & 0x3FFF;\n\t\t\t\t\tvar delayPos2Right = (delayPosRight +  6426) & 0x3FFF;\n\t\t\t\t\tvar delayPos3Right = (delayPosRight + 10907) & 0x3FFF;\n\t\t\t\t\tvar delaySampleRight0 = (delayLineRight[delayPosRight]\n\t\t\t\t\t\t+ channel#SampleRight // PITCH\n\t\t\t\t\t);\n\t\t\t\t\tvar delaySampleLeft1 = delayLineLeft[delayPos1Left];\n\t\t\t\t\tvar delaySampleLeft2 = delayLineLeft[delayPos2Left];\n\t\t\t\t\tvar delaySampleLeft3 = delayLineLeft[delayPos3Left];\n\t\t\t\t\tvar delayTemp0Left = -delaySampleLeft0 + delaySampleLeft1;\n\t\t\t\t\tvar delayTemp1Left = -delaySampleLeft0 - delaySampleLeft1;\n\t\t\t\t\tvar delayTemp2Left = -delaySampleLeft2 + delaySampleLeft3;\n\t\t\t\t\tvar delayTemp3Left = -delaySampleLeft2 - delaySampleLeft3;\n\t\t\t\t\tdelayFeedback0Left += ((delayTemp0Left + delayTemp2Left) * reverb - delayFeedback0Left) * 0.5;\n\t\t\t\t\tdelayFeedback1Left += ((delayTemp1Left + delayTemp3Left) * reverb - delayFeedback1Left) * 0.5;\n\t\t\t\t\tdelayFeedback2Left += ((delayTemp0Left - delayTemp2Left) * reverb - delayFeedback2Left) * 0.5;\n\t\t\t\t\tdelayFeedback3Left += ((delayTemp1Left - delayTemp3Left) * reverb - delayFeedback3Left) * 0.5;\n\t\t\t\t\tdelayLineLeft[delayPos1Left] = delayFeedback0Left;\n\t\t\t\t\tdelayLineLeft[delayPos2Left] = delayFeedback1Left;\n\t\t\t\t\tdelayLineLeft[delayPos3Left] = delayFeedback2Left;\n\t\t\t\t\tdelayLineLeft[delayPosLeft ] = delayFeedback3Left;\n\t\t\t\t\tdelayPosLeft = (delayPosLeft + 1) & 0x3FFF;\n\t\t\t\t\t\n\t\t\t\t\tvar delaySampleRight1 = delayLineRight[delayPos1Right];\n\t\t\t\t\tvar delaySampleRight2 = delayLineRight[delayPos2Right];\n\t\t\t\t\tvar delaySampleRight3 = delayLineRight[delayPos3Right];\n\t\t\t\t\tvar delayTemp0Right = -delaySampleRight0 + delaySampleRight1;\n\t\t\t\t\tvar delayTemp1Right = -delaySampleRight0 - delaySampleRight1;\n\t\t\t\t\tvar delayTemp2Right = -delaySampleRight2 + delaySampleRight3;\n\t\t\t\t\tvar delayTemp3Right = -delaySampleRight2 - delaySampleRight3;\n\t\t\t\t\tdelayFeedback0Right += ((delayTemp0Right + delayTemp2Right) * reverb - delayFeedback0Right) * 0.5;\n\t\t\t\t\tdelayFeedback1Right += ((delayTemp1Right + delayTemp3Right) * reverb - delayFeedback1Right) * 0.5;\n\t\t\t\t\tdelayFeedback2Right += ((delayTemp0Right - delayTemp2Right) * reverb - delayFeedback2Right) * 0.5;\n\t\t\t\t\tdelayFeedback3Right += ((delayTemp1Right - delayTemp3Right) * reverb - delayFeedback3Right) * 0.5;\n\t\t\t\t\tdelayLineRight[delayPos1Right] = delayFeedback0Right;\n\t\t\t\t\tdelayLineRight[delayPos2Right] = delayFeedback1Right;\n\t\t\t\t\tdelayLineRight[delayPos3Right] = delayFeedback2Right;\n\t\t\t\t\tdelayLineRight[delayPosRight ] = delayFeedback3Right;\n\t\t\t\t\tdelayPosRight = (delayPosRight + 1) & 0x3FFF;\n\t\t\t\t\t\n\t\t\t\t\tvar sampleLeft = delaySampleLeft0 + delaySampleLeft1 + delaySampleLeft2 + delaySampleLeft3\n\t\t\t\t\t\t+ channel#SampleLeft // NOISE\n\t\t\t\t\t;\n\t\t\t\t\t\n\t\t\t\t\tvar sampleRight = delaySampleRight0 + delaySampleRight1 + delaySampleRight2 + delaySampleRight3\n\t\t\t\t\t\t+ channel#SampleRight // NOISE\n\t\t\t\t\t;\n\t\t\t\t\t\n\t\t\t\t\tvar abs = sampleLeft < 0.0 ? -sampleLeft : sampleLeft;\n\t\t\t\t\tlimit -= limitDecay;\n\t\t\t\t\tif (limit < abs) limit = abs;\n\t\t\t\t\tsampleLeft /= limit * 0.75 + 0.25;\n\t\t\t\t\tsampleLeft *= volume;\n\t\t\t\t\tsampleLeft = sampleLeft;\n\t\t\t\t\tdataLeft[bufferIndex] = sampleLeft;\n\t\t\t\t\tsampleRight /= limit * 0.75 + 0.25;\n\t\t\t\t\tsampleRight *= volume;\n\t\t\t\t\tsampleRight = sampleRight;\n\t\t\t\t\tdataRight[bufferIndex] = sampleRight;\n\t\t\t\t\tbufferIndex++;\n\t\t\t\t\tsamples--;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tsynthChannel#.phases[0] = channel#PhaseA; // CHIP\n\t\t\t\tsynthChannel#.phases[1] = channel#PhaseB; // CHIP\n\t\t\t\tsynthChannel#.phases[0] = channel#Phase; // NOISE\n\t\t\t\tsynthChannel#.phases[$] = channel#Operator$Phase / " + Config.sineWaveLength + "; // FM\n\t\t\t\tsynthChannel#.feedbackOutputs[$] = channel#Operator$Output; // FM\n\t\t\t\tsynthChannel#.sampleLeft = channel#SampleLeft; // ALL\n\t\t\t\tsynthChannel#.sampleRight = channel#SampleRight; // ALL\n\t\t\t\t\n\t\t\t\tsynth.delayPosLeft = delayPosLeft;\n\t\t\t\tsynth.delayFeedback0Left = delayFeedback0Left;\n\t\t\t\tsynth.delayFeedback1Left = delayFeedback1Left;\n\t\t\t\tsynth.delayFeedback2Left = delayFeedback2Left;\n\t\t\t\tsynth.delayFeedback3Left = delayFeedback3Left;\n\t\t\t\tsynth.delayPosRight = delayPosRight;\n\t\t\t\tsynth.delayFeedback0Right = delayFeedback0Right;\n\t\t\t\tsynth.delayFeedback1Right = delayFeedback1Right;\n\t\t\t\tsynth.delayFeedback2Right = delayFeedback2Right;\n\t\t\t\tsynth.delayFeedback3Right = delayFeedback3Right;\n\t\t\t\tsynth.limit = limit;\n\t\t\t\t\n\t\t\t\tif (effectYMult * effectY - prevEffectY > prevEffectY) {\n\t\t\t\t\tsynth.effectPhase = Math.asin(effectY);\n\t\t\t\t} else {\n\t\t\t\t\tsynth.effectPhase = Math.PI - Math.asin(effectY);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tif (synth.arpeggioSampleCountdown == 0) {\n\t\t\t\t\tsynth.arpeggio++;\n\t\t\t\t\tsynth.arpeggioSampleCountdown = samplesPerArpeggio;\n\t\t\t\t\tif (synth.arpeggio == 4) {\n\t\t\t\t\t\tsynth.arpeggio = 0;\n\t\t\t\t\t\tsynth.part++;\n\t\t\t\t\t\tif (synth.part == song.partsPerBeat) {\n\t\t\t\t\t\t\tsynth.part = 0;\n\t\t\t\t\t\t\tsynth.beat++;\n\t\t\t\t\t\t\tif (synth.beat == song.beatsPerBar) {\n\t\t\t\t\t\t\t\t// The bar ended, may need to regenerate synthesizer.\n\t\t\t\t\t\t\t\treturn bufferIndex;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\t\n\t\t\t// Indicate that the buffer is finished generating.\n\t\t\treturn -1;\n\t\t").split("\n");
 	Synth.operatorSourceTemplate = ("\n\t\t\t\t\t\tvar channel#Operator$PhaseMix = channel#Operator$Phase/* + channel#Operator@Scaled*/;\n\t\t\t\t\t\tvar channel#Operator$PhaseInt = channel#Operator$PhaseMix|0;\n\t\t\t\t\t\tvar channel#Operator$Index    = channel#Operator$PhaseInt & " + Config.sineWaveMask + ";\n\t\t\t\t\t\tvar channel#Operator$Sample   = sineWave[channel#Operator$Index];\n\t\t\t\t\t\tchannel#Operator$Output       = channel#Operator$Sample + (sineWave[channel#Operator$Index + 1] - channel#Operator$Sample) * (channel#Operator$PhaseMix - channel#Operator$PhaseInt);\n\t\t\t\t\t\tvar channel#Operator$Scaled   = channel#Operator$OutputMult * channel#Operator$Output;\n\t\t").split("\n");
     beepbox.Synth = Synth;
-	
+
 })(beepbox || (beepbox = {}));
 var beepbox;
 (function (beepbox) {
@@ -4043,7 +4043,7 @@ var beepbox;
         return ChangeEffect;
     }(beepbox.Change));
     beepbox.ChangeEffect = ChangeEffect;
-	
+
 	var ChangeHarm = (function (_super) {
         __extends(ChangeHarm, _super);
         function ChangeHarm(doc, newValue) {
@@ -4089,7 +4089,7 @@ var beepbox;
         return ChangeImute;
     }(beepbox.Change));
     beepbox.ChangeImute = ChangeImute;
-	
+
     var ChangeIpan = (function (_super) {
         __extends(ChangeIpan, _super);
         function ChangeIpan(doc, oldValue, newValue) {
@@ -4103,7 +4103,7 @@ var beepbox;
         return ChangeIpan;
     }(beepbox.Change));
     beepbox.ChangeIpan = ChangeIpan;
-	
+
     var ChangeFilter = (function (_super) {
         __extends(ChangeFilter, _super);
         function ChangeFilter(doc, newValue) {
@@ -4601,7 +4601,7 @@ var beepbox;
         return ChangeScale;
     }(beepbox.Change));
     beepbox.ChangeScale = ChangeScale;
-	
+
 	var ChangeMix = (function (_super) {
         __extends(ChangeMix, _super);
         function ChangeMix(doc, newValue) {
@@ -4616,7 +4616,7 @@ var beepbox;
         return ChangeMix;
     }(beepbox.Change));
     beepbox.ChangeMix = ChangeMix;
-	
+
 	var ChangesampleRate = (function (_super) {
         __extends(ChangesampleRate, _super);
         function ChangesampleRate(doc, newValue) {
@@ -4631,8 +4631,8 @@ var beepbox;
         return ChangesampleRate;
     }(beepbox.Change));
     beepbox.ChangesampleRate = ChangesampleRate;
-	
-	
+
+
     var ChangeSong = (function (_super) {
         __extends(ChangeSong, _super);
         function ChangeSong(doc, newHash) {
@@ -5297,7 +5297,7 @@ var beepbox;
 					_this._backgroundPitchRows[7].setAttribute("fill", _this._doc.showFifth ? noteFive[_this._doc.song.key] : "#444444");
 					}
 				}
-				
+
 				if (_this._renderedMore != _this._doc.showMore) {
 					if (_this._doc.song.theme != 19) {
 					_this._renderedMore = _this._doc.showMore;
@@ -5788,8 +5788,8 @@ var beepbox;
                             bendVolume = Math.round(prevPin.volume * (1.0 - volumeRatio) + nextPin.volume * volumeRatio + ((this._mouseYStart - this._mouseY) / 20.0));
 							if (bendVolume < 0)
                                 bendVolume = 0;
-								if (bendVolume > 3) 
-								bendVolume = 3; 
+								if (bendVolume > 3)
+								bendVolume = 3;
 							bendInterval = this._snapToPitch(prevPin.interval * (1.0 - volumeRatio) + nextPin.interval * volumeRatio + this._cursor.curNote.pitches[0], 0, beepbox.Config.maxPitch) - this._cursor.curNote.pitches[0];
 							break;
                         }
@@ -5985,7 +5985,7 @@ var beepbox;
                     this._label.setAttribute("fill", "#000000");
                 }
                 else {
-					if (true) {	
+					if (true) {
 						this._rect.setAttribute("fill", (this._renderedIndex == 0) ? "#000000" : "#444444");
 						this._label.setAttribute("fill", color);
 					}
@@ -8243,7 +8243,7 @@ var beepbox;
     }());
     beepbox.ChorusPrompt = ChorusPrompt;
 })(beepbox || (beepbox = {}));
-var beepbox; 
+var beepbox;
 (function (beepbox) {
     var button = beepbox.html.button, div = beepbox.html.div, text = beepbox.html.text;
     var ArchivePrompt = (function () {
@@ -8494,10 +8494,10 @@ var beepbox;
             this._reverbSlider = new Slider(input({ style: "margin: 0px;", type: "range", min: "0", max: beepbox.Config.reverbRange - 1, value: "0", step: "1" }), this._doc, function (oldValue, newValue) { return new beepbox.ChangeReverb(_this._doc, oldValue, newValue); });
 
             this._blendSlider = new Slider(input({ style: "width: 9em; margin: 0px;", type: "range", min: "0", max: beepbox.Config.blendRange - 1, value: "0", step: "1" }), this._doc, function (oldValue, newValue) { return new beepbox.ChangeBlend(_this._doc, oldValue, newValue); });
-            this._riffSlider = new Slider(input({ style: "width: 9em; margin: 0px;", type: "range", min: "0", max: beepbox.Config.riffRange - 1, value: "0", step: "1" }), this._doc, function (oldValue, newValue) { return new beepbox.ChangeRiff(_this._doc, oldValue, newValue); });			
-            this._detuneSlider = new Slider(input({ style: "width: 9em; margin: 0px;", type: "range", min: "0", max: beepbox.Config.detuneRange - 1, value: "0", step: "1" }), this._doc, function (oldValue, newValue) { return new beepbox.ChangeDetune(_this._doc, oldValue, newValue); });		
-            this._muffSlider = new Slider(input({ style: "width: 9em; margin: 0px;", type: "range", min: "0", max: beepbox.Config.muffRange - 1, value: "0", step: "1" }), this._doc, function (oldValue, newValue) { return new beepbox.ChangeMuff(_this._doc, oldValue, newValue); });		
-			
+            this._riffSlider = new Slider(input({ style: "width: 9em; margin: 0px;", type: "range", min: "0", max: beepbox.Config.riffRange - 1, value: "0", step: "1" }), this._doc, function (oldValue, newValue) { return new beepbox.ChangeRiff(_this._doc, oldValue, newValue); });
+            this._detuneSlider = new Slider(input({ style: "width: 9em; margin: 0px;", type: "range", min: "0", max: beepbox.Config.detuneRange - 1, value: "0", step: "1" }), this._doc, function (oldValue, newValue) { return new beepbox.ChangeDetune(_this._doc, oldValue, newValue); });
+            this._muffSlider = new Slider(input({ style: "width: 9em; margin: 0px;", type: "range", min: "0", max: beepbox.Config.muffRange - 1, value: "0", step: "1" }), this._doc, function (oldValue, newValue) { return new beepbox.ChangeMuff(_this._doc, oldValue, newValue); });
+
             this._imuteSelect = button({style: "width: 27px;", type: "button"});
 			this._iMmuteSelect = button({style: "width: 27px;", type: "button"});
 			this._partSelect = buildOptions(select({}), beepbox.Config.partNames);
@@ -8529,10 +8529,10 @@ var beepbox;
             this._harmSelectRow = div({ className: "selectRow" }, [span({}, [text("Chord: ")]), this._chorusHint, div({ className: "selectContainer" }, [this._harmSelect])]);
 			this._octoffSelect = buildOptions(select({}), beepbox.Config.octoffNames);
             this._octoffSelectRow = div({ className: "selectRow" }, [span({}, [text("Octave Offset: ")]), div({ className: "selectContainer" }, [this._octoffSelect])]);
-            
+
 			this._ipanSlider = new Slider(input({ style: "margin: 8px; width: 100px;", type: "range", min: "-8", max: "0", value: "0", step: "1" }), this._doc, function (oldValue, newValue) { return new beepbox.ChangeIpan(_this._doc, oldValue, -newValue); });
             this._ipanSliderRow = div({ className: "selectRow" }, [span({}, [text("Panning: ")]), span({}, [text("L")]), this._ipanSlider.input, span({}, [text("R")])]);
-            
+
 			this._phaseModGroup = div({ style: "display: flex; flex-direction: column; display: none;" }, []);
             this._feedbackTypeSelect = buildOptions(select({}), beepbox.Config.operatorFeedbackNames);
             this._feedbackRow1 = div({ className: "selectRow" }, [span({}, [text("Feedback: ")]), div({ className: "selectContainer" }, [this._feedbackTypeSelect])]);
@@ -8616,13 +8616,13 @@ var beepbox;
                     ]),
                     ]),
                 ]),
-            ]),  
+            ]),
 		    this._advancedSettingsContainer = div({ className: "editor-right-widget-column", style: "margin: 0px 5px;"}, [
 			div({ className: "editor-widgets" }, [
 				div({ style: "text-align: center; color: ;" }, [text("Advanced Settings")]),
                 div({ style: "margin: 2px 0; display: flex; flex-direction: row; align-items: center;" }, []),
                 div({ className: "editor-menus" }, [
-					this._newSongButton,    
+					this._newSongButton,
 					this._customizeButton,
 					this._songDataButton,
 					div({ style: "margin: 5px 0; display: flex; flex-direction: row; justify-content: space-between;" }, [
@@ -8630,7 +8630,7 @@ var beepbox;
 					this._undoButton,
 					this._redoButton,
 					this._nextBarButton,
-					]), 
+					]),
 				]),
 				div({ className: "editor-settings" }, [
                     this._advancedSongSettings = div({ className: "editor-song-settings", style: "margin: 0px 5px;"}, [
@@ -8648,7 +8648,7 @@ var beepbox;
                 ]),
                 ]),
                 ]),
-            ]),  
+            ]),
             this._promptContainer,
             ]);
             this._changeTranspose = null;
@@ -8801,7 +8801,7 @@ var beepbox;
 				setSelectedIndex(_this._ipanSlider, instrument.ipan);
 				setSelectedIndex(_this._instrumentVolumeSlider, instrument.volume);
 				setSelectedIndex(_this._instrumentMVolumeSlider, instrument.volume);
-				
+
 				this._saveMuteInstrument = function () {
 					setSelectedIndex(_this._imuteSelect, instrument.imute);
 					setSelectedIndex(_this._iMmuteSelect, instrument.imute);
@@ -8846,7 +8846,7 @@ var beepbox;
                 _this._setPrompt(_this._doc.prompt);
                 if (_this._doc.autoFollow && !_this._doc.synth.playing) {
 					_this._doc.synth.snapToBar(_this._doc.bar);
-                }	
+                }
             };
 			this._muteInstrument = function () {
 				var channel = _this._doc.song.channels[_this._doc.channel];
@@ -8991,7 +8991,7 @@ var beepbox;
             };
             this._openChipPrompt = function () {
                 _this._openPrompt("chipPrompt");
-            }; 
+            };
             this._openMixPrompt = function () {
                 _this._openPrompt("mix");
             };
