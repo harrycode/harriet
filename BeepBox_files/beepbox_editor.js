@@ -23,7 +23,7 @@ var beepbox;
 (function (beepbox) {
     class Config {
     }
-    Config.versionDisplayName = "Modbox 3.3 BETA";
+    Config.versionDisplayName = "Harriet 3.3 BETA";
     Config.scales = toNameMap([
         { name: "happy pentatonic", flags: [true, false, true, false, true, false, false, true, false, true, false, false] },
         { name: "sad pentatonic", flags: [true, false, false, true, false, true, false, true, false, false, true, false] },
@@ -57,8 +57,8 @@ var beepbox;
     Config.blackKeyNameParents = [-1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1];
     Config.tempoMin = 16;
     Config.tempoMax = 999;
-    Config.reverbRange = 4;
-    Config.beatsPerBarMin = 2;
+    Config.reverbRange = 100;
+    Config.beatsPerBarMin = 1;
     Config.beatsPerBarMax = 64;
     Config.barCountMin = 1;
     Config.barCountMax = 256;
@@ -180,7 +180,10 @@ var beepbox;
         { name: "13×", mult: 13.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "16×", mult: 16.0, hzOffset: 0.0, amplitudeSign: 1.0 },
         { name: "20×", mult: 20.0, hzOffset: 0.0, amplitudeSign: 1.0 },
-    ]);
+        { name: "32×", mult: 32.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+        { name: "64×", mult: 64.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+        { name: "128×", mult: 128.0, hzOffset: 0.0, amplitudeSign: 1.0 },
+]);
     Config.envelopes = toNameMap([
         { name: "custom", type: 0, speed: 0.0 },
         { name: "steady", type: 1, speed: 0.0 },
